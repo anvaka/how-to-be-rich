@@ -1,6 +1,6 @@
 # How to Be Rich
 
-A daily practice in exploring true wealth. Visit [how-to-be-rich.com](https://how-to-be-rich.com) to start your journey.
+A daily practice in exploring true wealth. Visit https://anvaka.github.io/how-to-be-rich/ to start your journey.
 
 ## What is this?
 
@@ -50,7 +50,7 @@ It got me thinking - I want to be rich too, but not just in the conventional sen
 
 ## Philosophy
 
-This website is meant to be visited daily, not consumed all at once. Think of it as a daily vitamin for your soul - pick one area to focus on and let it guide your day. True wealth isn't built overnight, but through consistent, mindful practice.
+[This website](https://anvaka.github.io/how-to-be-rich/) is meant to be visited daily, not consumed all at once. Think of it as a daily vitamin for your soul - pick one area to focus on and let it guide your day. True wealth isn't built overnight, but through consistent, mindful practice.
 
 ## Technical Details
 
