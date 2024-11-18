@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TXT6313TGG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TXT6313TGG');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Be Rich</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles specific to index page */
+        .container {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            max-width: 1200px;
+        }
+        .topic-link {
+            text-decoration: none;
+            display: block;
+            height: 100%;
+        }
+        .card {
+            height: calc(100% - 48px); /* Adjust for padding */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+        .card-title {
+            margin: 0;
+            border-bottom: none;
+            padding: 0;
+        }
+        .random-link {
+            color: var(--text-accent);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .random-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>How to Be <a href="about.html" class="accent">Rich</a></h1>
+        <div class="quote-container">
+            <p>Choose your daily practice below or <a class="random-link" onclick="goToRandom()">click here</a> to pick random for you</p>
+        </div>
+    </div>
+
+    <div class="container" id="topic-grid"></div>
+
+    <p class="outro">
+        True wealth isn't measured in money alone, but in the richness of our experiences, relationships, and personal growth.
+    </p>
+
+    <p class="byline">
+        Made with 💖 by <a href="about.html"  class="accent">Anvaka</a>
+    </p>
+
+    <script>
+        const topics = [
+            "time", "experiences", "connection", "purpose", "creativity",
+            "adventure", "love", "family", "health", "gratitude",
+            "blessings", "mind", "knowledge", "wisdom", "happiness",
+            "curiosity", "kindness", "empathy", "contentment", "resilience",
+            "community", "growth"
+        ];
+
+        function capitalizeFirst(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        function createTopicLinks() {
+            const grid = document.getElementById('topic-grid');
+            topics.forEach(topic => {
+                const link = document.createElement('a');
+                link.href = `${topic}.html`;
+                link.className = 'topic-link';
+                
+                const card = document.createElement('div');
+                card.className = 'card';
+                
+                const title = document.createElement('div');
+                title.className = 'card-title';
+                title.textContent = capitalizeFirst(topic);
+                
+                card.appendChild(title);
+                link.appendChild(card);
+                grid.appendChild(link);
+            });
+        }
+
+        function goToRandom() {
+            const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+            window.location.href = `${randomTopic}.html`;
+        }
+
+        // Initialize the page
+        createTopicLinks();
+    </script>
+</body>
+</html>

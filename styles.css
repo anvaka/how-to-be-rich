@@ -1,0 +1,150 @@
+
+:root {
+  --card-background: #ffffff;
+  --card-text: #2c3e50;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --text-accent: #db3498;
+  --card-highlight: #e8f4fc;
+  --example-background: #f8f9fa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      --card-background: #2d2d2d;
+      --card-text: #ffffff;
+      --background-color: #1a1a1a;
+      --text-color: #f5f5f5;
+      --text-accent: #64b5f6;
+      --card-highlight: #3d4852;
+      --example-background: #333;
+  }
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+
+.quote-container {
+  margin: 0px auto;
+  max-width: 600px;
+}
+
+.card {
+  background-color: var(--card-background);
+  color: var(--card-text);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card-title {
+  font-weight: bold;
+  color: var(--text-accent);
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--text-accent);
+  padding-bottom: 8px;
+}
+
+.expand-link {
+  color: var(--text-accent);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  text-decoration: none;
+}
+
+.expand-link:hover {
+  text-decoration: underline;
+}
+
+.expand-link::after {
+  content: '↓';
+  transition: transform 0.3s ease;
+  font-size: 0.8em;
+}
+
+.expand-link.expanded::after {
+  transform: rotate(180deg);
+}
+
+.example-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  margin-top: 8px;
+}
+
+.example-content.expanded {
+  max-height: 500px;
+}
+
+.tip-list {
+  margin: 12px 0 0 0;
+  padding-left: 20px;
+}
+
+.tip-list li {
+  margin-bottom: 8px;
+}
+
+.accent {
+  color: var(--text-accent);
+  font-weight: bold;
+}
+
+.outro {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-color);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  .container {
+      padding: 10px;
+  }
+  .card {
+      padding: 16px;
+  }
+  .header h1 {
+      font-size: 2rem;
+  }
+}
+.byline {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-top: 20px;
+}
