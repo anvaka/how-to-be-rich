@@ -47,6 +47,7 @@ It got me thinking - I want to be rich too, but not just in the conventional sen
 * Resilience
 * Community
 * Growth
+* Faith
 
 ## Philosophy
 
